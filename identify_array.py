@@ -27,7 +27,7 @@ def sort(handle_str, sort_lower_, sort_upper_, fig):
     y = ''
     z = ''
     judge = 0
-    for k in range(start+1, sort_upper_ - sort_lower_ - 8):
+    for k in range(start+1, sort_upper_ - sort_lower_ - 7):
         if handle_str[k] == ' ':
             if judge == 0:
                 label[n] = temp
@@ -54,7 +54,6 @@ def sort(handle_str, sort_lower_, sort_upper_, fig):
             else:
                 z = z + handle_str[k]
     return position_x, position_y, position_z
-    #return z
 
 
 file_name = 'untitled.msh'
@@ -69,6 +68,7 @@ __x__, __y__, __z__ = sort(str_name[lower+7: upper], lower, upper,fig)
 #print(__z__)
 N = input('please input the label = ')
 if N in __x__:
+    print('the position is :')
     print(__x__[N],__y__[N],__z__[N])
 else:
     print('the label does not exist, please input again')
